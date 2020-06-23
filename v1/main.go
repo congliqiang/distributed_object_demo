@@ -1,6 +1,7 @@
-package v1
+package main
 
 import (
+	"distributed_object_demo/v1/objects"
 	"log"
 	"net/http"
 	"os"
