@@ -1,9 +1,9 @@
 package objects
 
 import (
-	"distributed_object_demo/v3/es"
-	"distributed_object_demo/v3/interface_server/locate"
-	"distributed_object_demo/v3/interface_server/objectstream"
+	"github.com/congliqiang/distributed_object_demo/v3/es"
+	"github.com/congliqiang/distributed_object_demo/v3/interface_server/locate"
+	"github.com/congliqiang/distributed_object_demo/v3/interface_server/objectstream"
 	"fmt"
 	"io"
 	"log"

@@ -1,7 +1,7 @@
 package versions
 
 import (
-	"distributed_object_demo/v3/es"
+	"github.com/congliqiang/distributed_object_demo/v3/es"
 	"encoding/json"
 	"log"
 	"net/http"

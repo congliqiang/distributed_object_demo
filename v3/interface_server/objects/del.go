@@ -1,7 +1,7 @@
 package objects
 
 import (
-	"distributed_object_demo/v3/es"
+	"github.com/congliqiang/distributed_object_demo/v3/es"
 	"log"
 	"net/http"
 	"strings"

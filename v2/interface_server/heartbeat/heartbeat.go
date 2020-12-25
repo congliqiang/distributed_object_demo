@@ -1,7 +1,7 @@
 package heartbeat
 
 import (
-	"distributed_object_demo/v2/rabbitmq"
+	"github.com/congliqiang/distributed_object_demo/v2/rabbitmq"
 	"math/rand"
 	"os"
 	"strconv"

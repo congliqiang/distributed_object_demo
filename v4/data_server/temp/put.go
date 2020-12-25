@@ -1,7 +1,7 @@
 package temp
 
 import (
-	"distributed_object_demo/v4/data_server/locate"
+	"github.com/congliqiang/distributed_object_demo/v4/data_server/locate"
 	"log"
 	"net/http"
 	"os"

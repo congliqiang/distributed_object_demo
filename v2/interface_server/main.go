@@ -1,9 +1,9 @@
 package main
 
 import (
-	"distributed_object_demo/v2/interface_server/heartbeat"
-	"distributed_object_demo/v2/interface_server/locate"
-	"distributed_object_demo/v2/interface_server/objects"
+	"github.com/congliqiang/distributed_object_demo/v2/interface_server/heartbeat"
+	"github.com/congliqiang/distributed_object_demo/v2/interface_server/locate"
+	"github.com/congliqiang/distributed_object_demo/v2/interface_server/objects"
 	"log"
 	"net/http"
 	"os"

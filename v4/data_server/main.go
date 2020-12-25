@@ -1,10 +1,10 @@
 package main
 
 import (
-	"distributed_object_demo/v4/data_server/heartbeat"
-	"distributed_object_demo/v4/data_server/locate"
-	"distributed_object_demo/v4/data_server/objects"
-	"distributed_object_demo/v4/data_server/temp"
+	"github.com/congliqiang/distributed_object_demo/v4/data_server/heartbeat"
+	"github.com/congliqiang/distributed_object_demo/v4/data_server/locate"
+	"github.com/congliqiang/distributed_object_demo/v4/data_server/objects"
+	"github.com/congliqiang/distributed_object_demo/v4/data_server/temp"
 	"log"
 	"net/http"
 	"os"

@@ -1,7 +1,7 @@
 package locate
 
 import (
-	"distributed_object_demo/v4/rabbitmq"
+	"github.com/congliqiang/distributed_object_demo/v4/rabbitmq"
 	"os"
 	"path/filepath"
 	"strconv"
