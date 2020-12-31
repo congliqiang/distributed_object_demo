@@ -1,22 +1,41 @@
 package objects
 
 import (
+	"github.com/congliqiang/distributed_object_demo/v4/data_server/locate"
+	"github.com/congliqiang/distributed_object_demo/v4/utils"
 	"io"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"strings"
 )
 
 func get(w http.ResponseWriter, r *http.Request) {
-	// 同理put函数, os.Open打开文件
-	f, e := os.Open(os.Getenv("STORAGE_ROOT") + "/objects/" + strings.Split(r.URL.EscapedPath(), "/")[2])
-	if e != nil {
-		log.Println(e)
+	file := getFile(strings.Split(r.URL.EscapedPath(), "/")[2])
+	if file == "" {
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
+	sendFile(w, file)
+}
+
+func getFile(hash string) string {
+	file := os.Getenv("STORAGE_ROOT") + "/objects/" + hash
+	f, _ := os.Open(file)
+	d := url.PathEscape(utils.CalculateHash(f))
+	_ = f.Close()
+	if d != hash {
+		log.Println("object hash mismatch, remove", file)
+		locate.Del(hash)
+		os.Remove(file)
+		return ""
+	}
+	return file
+}
+
+func sendFile(w io.Writer, file string) {
+	f, _ := os.Open(file)
 	defer f.Close()
-	// 把文件写入响应体
-	_, _ = io.Copy(w, f)
+	io.Copy(w, f)
 }

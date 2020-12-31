@@ -1,9 +1,9 @@
 package objects
 
 import (
+	"fmt"
 	"github.com/congliqiang/distributed_object_demo/v2/interface_server/heartbeat"
 	"github.com/congliqiang/distributed_object_demo/v2/interface_server/objectstream"
-	"fmt"
 	"io"
 	"log"
 	"net/http"
