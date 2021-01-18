@@ -2,9 +2,9 @@ package locate
 
 import (
 	"encoding/json"
-	"github.com/congliqiang/distributed_object_demo/v5/data_server/types"
-	"github.com/congliqiang/distributed_object_demo/v5/rabbitmq"
-	"github.com/congliqiang/distributed_object_demo/v5/rs"
+	"github.com/congliqiang/distributed_object_demo/v6/data_server/types"
+	"github.com/congliqiang/distributed_object_demo/v6/rabbitmq"
+	"github.com/congliqiang/distributed_object_demo/v6/rs"
 	"net/http"
 	"os"
 	"strings"
